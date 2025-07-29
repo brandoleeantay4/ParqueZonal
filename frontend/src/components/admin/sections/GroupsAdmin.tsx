@@ -372,7 +372,7 @@ export const GroupsAdmin = () => {
                 {formData.image && (
                   <div className="mt-4">
                     <img
-                      src={`http://localhost:5000${formData.image}`}
+                      src={`${import.meta.env.VITE_API_URL}${formData.image}`}
                       alt="Preview"
                       className="w-full h-32 object-cover rounded"
                     />
