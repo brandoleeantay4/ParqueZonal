@@ -15,6 +15,8 @@ const App = () => {
 
   console.log("Valor de VITE_API_URL:", import.meta.env.VITE_API_URL);
 
+  return (
+
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -31,6 +33,7 @@ const App = () => {
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-}
+  );
+};
 
 export default App;
