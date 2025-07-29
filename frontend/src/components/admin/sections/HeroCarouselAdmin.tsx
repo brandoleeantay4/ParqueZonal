@@ -303,7 +303,7 @@ export const HeroCarouselAdmin = () => {
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <img
-              src={`import.meta.env.VITE_API_URL${slide.image}`}
+              src={`${import.meta.env.VITE_API_URL}${slide.image}`}}
               alt={slide.title}
               className="w-full h-48 object-cover"
             />

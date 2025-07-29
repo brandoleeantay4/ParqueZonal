@@ -250,7 +250,7 @@ export const WondersSection = () => {
                   {/* Imagen de la maravilla */}
                   <div className="relative h-64 overflow-hidden rounded-t-lg">
                     <img
-                      src={`import.meta.env.VITE_API_URL${wonder.image}`}
+                      src={`${import.meta.env.VITE_API_URL}${wonder.image}`}}
                       alt={wonder.name}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-110 pointer-events-none"
                       style={{ backgroundColor: "#054986" }}
