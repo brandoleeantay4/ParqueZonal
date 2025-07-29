@@ -198,7 +198,7 @@ export const MapAdmin = () => {
               <div className="border rounded-lg p-4 bg-gray-50">
                 <img
                   <img
-                  src={`${import.meta.env.VITE_API_URL}${mapData.image}`}
+                    src={`${import.meta.env.VITE_API_URL}${mapData.image}`}}
                   alt="Mapa actual"
                   className="w-full h-48 object-cover rounded"
                 />
