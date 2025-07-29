@@ -246,7 +246,7 @@ export const ZooAdmin = () => {
                   {formData.image && (
                     <div className="mt-4">
                       <img
-                        src={`import.meta.env.VITE_API_URL${formData.image}`}
+                        src={`http://localhost:5000${formData.image}`}
                         alt="Preview"
                         className="w-full h-32 object-cover rounded"
                       />
@@ -340,7 +340,7 @@ export const ZooAdmin = () => {
             className={`bg-white rounded-lg shadow-lg overflow-hidden ${!animal.active ? "opacity-50" : ""}`}
           >
             <img
-              src={`${import.meta.env.VITE_API_URL}${animal.image}`}}
+              src={`http://localhost:5000${animal.image}`}
               alt={animal.name}
               className="w-full h-48 object-cover"
             />
@@ -459,7 +459,7 @@ export const ZooAdmin = () => {
                 {formData.image && (
                   <div className="mt-4">
                     <img
-                      src={`import.meta.env.VITE_API_URL${formData.image}`}
+                      src={`http://localhost:5000${formData.image}`}
                       alt="Preview"
                       className="w-full h-32 object-cover rounded"
                     />

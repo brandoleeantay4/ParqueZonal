@@ -142,7 +142,7 @@ export const MapAdmin = () => {
       <div className="max-w-2xl">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <img
-            src={`${import.meta.env.VITE_API_URL}${mapData.image}` || "/placeholder.svg"}
+            src={`http://localhost:5000${mapData.image}` || "/placeholder.svg"}
             alt="Mapa del Parque"
             className={`w-full h-64 object-cover ${!mapData.active ? "opacity-50" : ""}`}
             onError={(e) => {
@@ -197,7 +197,7 @@ export const MapAdmin = () => {
               <Label>Imagen actual</Label>
               <div className="border rounded-lg p-4 bg-gray-50">
                 <img
-                  src={`${import.meta.env.VITE_API_URL}${mapData.image}`}}
+                  src={`http://localhost:5000${mapData.image}`}
                   alt="Mapa actual"
                   className="w-full h-48 object-cover rounded"
                 />
@@ -238,7 +238,7 @@ export const MapAdmin = () => {
                   <div className="mt-4">
                     <p className="text-sm text-gray-600 mb-2">Nueva imagen:</p>
                     <img
-                      src={`${import.meta.env.VITE_API_URL}${formData.image}`}}
+                      src={`http://localhost:5000${formData.image}`}
                       alt="Preview nuevo mapa"
                       className="w-full h-48 object-cover rounded"
                     />

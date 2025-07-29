@@ -215,7 +215,7 @@ export const WondersAdmin = () => {
                   {formData.image && (
                     <div className="mt-4">
                       <img
-                        src={`import.meta.env.VITE_API_URL${formData.image}`}
+                        src={`http://localhost:5000${formData.image}`}
                         alt="Preview"
                         className="w-full h-32 object-cover rounded"
                       />
@@ -304,7 +304,7 @@ export const WondersAdmin = () => {
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <img
-              src={`${import.meta.env.VITE_API_URL}${wonder.image}`}}
+              src={`http://localhost:5000${wonder.image}`}
               alt={wonder.name}
               className="w-full h-48 object-cover"
             />
@@ -410,7 +410,7 @@ export const WondersAdmin = () => {
                 {formData.image && (
                   <div className="mt-4">
                     <img
-                      src={`import.meta.env.VITE_API_URL${formData.image}`}
+                      src={`http://localhost:5000${formData.image}`}
                       alt="Preview"
                       className="w-full h-32 object-cover rounded"
                     />
