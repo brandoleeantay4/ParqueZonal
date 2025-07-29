@@ -340,7 +340,7 @@ export const ZooAdmin = () => {
             className={`bg-white rounded-lg shadow-lg overflow-hidden ${!animal.active ? "opacity-50" : ""}`}
           >
             <img
-              src={`http://localhost:5000${animal.image}`}
+              src={`${import.meta.env.VITE_API_URL}${animal.image}`}
               alt={animal.name}
               className="w-full h-48 object-cover"
             />
