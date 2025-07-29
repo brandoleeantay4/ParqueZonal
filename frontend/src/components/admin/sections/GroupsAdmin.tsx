@@ -212,7 +212,7 @@ export const GroupsAdmin = () => {
                   {formData.image && (
                     <div className="mt-4">
                       <img
-                        src={`http://localhost:5000${formData.image}`}
+                        src={`import.meta.env.VITE_API_URL${formData.image}`}
                         alt="Preview"
                         className="w-full h-32 object-cover rounded"
                       />
@@ -270,7 +270,7 @@ export const GroupsAdmin = () => {
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <img
-              src={`http://localhost:5000${image.image}`}
+              src={`import.meta.env.VITE_API_URL${image.image}`}
               alt=""
               className="w-full h-48 object-cover"
             />
@@ -372,7 +372,7 @@ export const GroupsAdmin = () => {
                 {formData.image && (
                   <div className="mt-4">
                     <img
-                      src={`http://localhost:5000${formData.image}`}
+                      src={`import.meta.env.VITE_API_URL${formData.image}`}
                       alt="Preview"
                       className="w-full h-32 object-cover rounded"
                     />

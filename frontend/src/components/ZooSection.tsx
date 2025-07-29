@@ -101,7 +101,7 @@ export const ZooSection = () => {
             >
               <div className="relative h-full w-full">
                 <img
-                  src={`http://localhost:5000${animal.image}`}
+                  src={`import.meta.env.VITE_API_URL${animal.image}`}
                   alt={animal.name}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                   style={{ backgroundColor: "#00864b" }}
@@ -191,7 +191,7 @@ export const ZooSection = () => {
         >
           <div className="relative">
             <img
-              src={`http://localhost:5000${currentAnimals[selectedImageIndex].image}`}
+              src={`import.meta.env.VITE_API_URL${currentAnimals[selectedImageIndex].image}`}
               alt="Foto ampliada"
               className="max-w-[80vw] max-h-[80vh] w-auto h-auto rounded shadow-lg mx-auto"
               onClick={(e) => e.stopPropagation()}

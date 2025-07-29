@@ -181,7 +181,7 @@ export const HeroCarousel = () => {
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: `url(http://localhost:5000${slide.image})`,
+                backgroundImage: `url(import.meta.env.VITE_API_URL${slide.image})`,
                 backgroundColor: index % 2 === 0 ? "#054986" : "#f29200",
               }}
             />

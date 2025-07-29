@@ -13,7 +13,10 @@ const mapDataRoutes = require('../routes/mapDataRoutes');
 const errorHandler = require('../middleware/errorHandler');
 
 module.exports = (app) => {
-  app.use(cors());
+  const corsOptions = {
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  };
+  app.use(cors(corsOptions));
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 

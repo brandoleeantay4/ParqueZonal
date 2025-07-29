@@ -117,7 +117,7 @@ const WonderDetail = () => {
             <div className="space-y-6">
               <div className="relative">
                 <img
-                  src={`http://localhost:5000${currentWonder.image}`}
+                  src={`import.meta.env.VITE_API_URL${currentWonder.image}`}
                   alt={currentWonder.name}
                   className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
                   style={{ backgroundColor: "#054986" }}

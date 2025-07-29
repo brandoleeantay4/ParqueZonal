@@ -15,7 +15,7 @@ export const GroupPricing = () => {
     .filter((image) => image.active)
     .map((image) => ({
       id: image.id,
-      src: `http://localhost:5000${image.image}`,
+      src: `import.meta.env.VITE_API_URL${image.image}`,
       caption: image.caption,
     }));
 
