@@ -3,11 +3,13 @@ require('dotenv').config();
 module.exports = {
   port: process.env.PORT || 5000,
   database: {
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || '',
-    name: process.env.DB_NAME || 'chavin_huantar_park',
-    dialect: process.env.DB_DIALECT || 'mysql',
+    url: process.env.DATABASE_URL,
+    host: process.env.MYSQLHOST || 'localhost',
+    user: process.env.MYSQLUSER || 'root',
+    password: process.env.MYSQLPASSWORD || '',
+    name: process.env.MYSQLDATABASE || 'chavin_huantar_park',
+    port: process.env.MYSQLPORT || 3306,
+    dialect: 'mysql',
   },
   jwt: {
     secret: process.env.JWT_SECRET || 'supersecretjwtkey',

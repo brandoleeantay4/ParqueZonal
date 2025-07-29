@@ -1,16 +1,22 @@
 const { Sequelize } = require('sequelize');
 const config = require('../config');
 
-const sequelize = new Sequelize(
-  config.database.name,
-  config.database.user,
-  config.database.password,
-  {
-    host: config.database.host,
-    dialect: config.database.dialect,
-    logging: false, // Deshabilita el log de SQL en consola
-  }
-);
+const sequelize = config.database.url
+  ? new Sequelize(config.database.url, {
+      dialect: 'mysql',
+      logging: false,
+    })
+  : new Sequelize(
+      config.database.name,
+      config.database.user,
+      config.database.password,
+      {
+        host: config.database.host,
+        port: config.database.port,
+        dialect: 'mysql',
+        logging: false,
+      }
+    );
 
 const connectDB = async () => {
   try {
