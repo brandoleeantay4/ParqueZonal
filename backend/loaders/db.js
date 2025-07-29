@@ -20,7 +20,7 @@ const sequelize = config.database.url
 
 const connectDB = async () => {
   try {
-    await sequelize.authenticate();
+    // await sequelize.authenticate();
     console.log('Conexión a la base de datos MySQL establecida correctamente.');
     // Sincronizar modelos (crea las tablas si no existen)
     await sequelize.sync({ alter: true }); // 'alter: true' para actualizar tablas existentes
