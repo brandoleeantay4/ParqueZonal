@@ -26,7 +26,7 @@ export default function AdminLogin() {
     try {
       const success = await login(email, password);
       if (!success) {
-        setError("Credenciales incorrectas. Use admin@parque.com / admin123");
+        setError("Credenciales incorrectas.");
         toast({
           title: "Error de inicio de sesión",
           description: "Credenciales incorrectas.",
@@ -148,7 +148,7 @@ export default function AdminLogin() {
                   
 
                   {/* Credenciales de demo */}
-                  <div className="p-3 bg-blue-50 border border-blue-200 rounded-md">
+                  {/* <div className="p-3 bg-blue-50 border border-blue-200 rounded-md">
                     <p className="text-xs text-blue-600 mb-1">
                       <strong>Credenciales de demo:</strong>
                     </p>
@@ -158,7 +158,7 @@ export default function AdminLogin() {
                     <p className="text-xs text-blue-600">
                       Contraseña: admin123
                     </p>
-                  </div>
+                  </div> */}
 
                   {/* Botón de login */}
                   <Button
