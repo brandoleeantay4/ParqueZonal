@@ -100,7 +100,7 @@ export default function AdminLogin() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="admin@parque.com"
+                      placeholder="Correo electrónico"
                       required
                       className="border-gray-300 focus:border-park-blue focus:ring-park-blue"
                     />
@@ -120,7 +120,7 @@ export default function AdminLogin() {
                         type={showPassword ? "text" : "password"}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Ingrese su contraseña"
+                        placeholder="Contraseña"
                         required
                         className="border-gray-300 focus:border-park-blue focus:ring-park-blue pr-10"
                       />
