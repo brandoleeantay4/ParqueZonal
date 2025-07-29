@@ -100,7 +100,7 @@ export default function AdminLogin() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="admin@parque.com"
+                      placeholder="Ingrese su correo"
                       required
                       className="border-gray-300 focus:border-park-blue focus:ring-park-blue"
                     />
