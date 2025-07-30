@@ -304,7 +304,7 @@ export const WondersAdmin = () => {
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <img
-              src={`${import.meta.env.VITE_API_URL}${wonder.image}`}
+              src={wonder.image}
               alt={wonder.name}
               className="w-full h-48 object-cover"
             />
