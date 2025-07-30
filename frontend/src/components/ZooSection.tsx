@@ -191,7 +191,7 @@ export const ZooSection = () => {
         >
           <div className="relative">
             <img
-              src={`${import.meta.env.VITE_API_URL}${currentAnimals[selectedImageIndex].image}`}
+              src={currentAnimals[selectedImageIndex].image}
               alt="Foto ampliada"
               className="max-w-[80vw] max-h-[80vh] w-auto h-auto rounded shadow-lg mx-auto"
               onClick={(e) => e.stopPropagation()}

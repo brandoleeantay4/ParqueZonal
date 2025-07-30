@@ -30,7 +30,7 @@ export const MapSection = () => {
     return null;
   }
 
-  const mapImage = `${import.meta.env.VITE_API_URL}${mapData.image}`;
+  const mapImage = mapData.image;
 
   return (
     <section id="mapa" className="py-16 bg-white">

@@ -21,7 +21,7 @@ module.exports = (app) => {
   app.use(express.urlencoded({ extended: true }));
 
   // Servir archivos estáticos desde la carpeta 'uploads'
-  app.use('/uploads', express.static('uploads'));
+  // app.use('/uploads', express.static('uploads')); // Ya no es necesario con Cloudinary
 
   // Rutas
   app.use('/api/upload', uploadRoutes);

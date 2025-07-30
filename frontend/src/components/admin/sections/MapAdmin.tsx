@@ -238,7 +238,7 @@ export const MapAdmin = () => {
                   <div className="mt-4">
                     <p className="text-sm text-gray-600 mb-2">Nueva imagen:</p>
                     <img
-                      src={`${import.meta.env.VITE_API_URL}${formData.image}`}
+                      src={formData.image}
                       alt="Preview nuevo mapa"
                       className="w-full h-48 object-cover rounded"
                     />

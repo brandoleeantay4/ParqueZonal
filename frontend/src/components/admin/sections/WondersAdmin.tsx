@@ -410,10 +410,10 @@ export const WondersAdmin = () => {
                 {formData.image && (
                   <div className="mt-4">
                     <img
-                      src={`${import.meta.env.VITE_API_URL}${formData.image}`}
-                      alt="Preview"
-                      className="w-full h-32 object-cover rounded"
-                    />
+                        src={formData.image}
+                        alt="Preview"
+                        className="w-full h-32 object-cover rounded"
+                      />
                   </div>
                 )}
               </div>
