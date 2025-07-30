@@ -2,12 +2,21 @@ const cloudinary = require('cloudinary').v2;
 const multer = require('multer');
 const config = require('../config');
 
+// Configura el SDK de Cloudinary con las credenciales obtenidas del archivo de configuración.
+// Esto permite que la aplicación se autentique con la API de Cloudinary para realizar operaciones como subir imágenes.
 cloudinary.config({
   cloud_name: config.cloudinary.cloud_name,
   api_key: config.cloudinary.api_key,
   api_secret: config.cloudinary.api_secret,
 });
 
+// Configuración de Multer para la Subida de Archivos:
+// Se define cómo Multer debe manejar los archivos entrantes.
+// `multer.memoryStorage()` indica que los archivos se almacenarán temporalmente en la memoria RAM del servidor
+// como un Buffer, en lugar de escribirlos en el disco.
+// El `fileFilter` asegura que solo se acepten archivos cuyo tipo MIME comience con 'image/',
+// rechazando cualquier otro tipo de archivo para mantener la integridad y seguridad.
+// Además, se establece un límite de `fileSize` de 5 MB para prevenir subidas excesivamente grandes.
 const storage = multer.memoryStorage();
 const uploadMulter = multer({
   storage: storage,
@@ -23,6 +32,19 @@ const uploadMulter = multer({
   },
 });
 
+
+// Middleware Principal para la Subida a Cloudinary:
+// `uploadToCloudinary` es una función middleware diseñada para ser utilizada en las rutas de Express.js.
+// Internamente, utiliza `uploadMulter.single('image')` para procesar un único archivo con el nombre de campo 'image'
+// proveniente del formulario.
+// Este bloque maneja los posibles errores de Multer (como tamaño de archivo excedido o tipo incorrecto)
+// y verifica si se ha adjuntado un archivo. Si no hay errores y un archivo está presente:
+// 1. Convierte el archivo (que está en un Buffer en memoria) a una cadena Base64.
+// 2. Crea una Data URI a partir del tipo MIME y la cadena Base64. Esta es la forma en que Cloudinary recibe el archivo.
+// 3. Llama al método `cloudinary.uploader.upload()` para enviar la Data URI a Cloudinary, especificando la carpeta
+//    de destino ('parque_chavin') en la cuenta de Cloudinary.
+// 4. Incluye un bloque `try-catch` para manejar cualquier error que pueda ocurrir durante el proceso de subida a Cloudinary,
+//    proporcionando una respuesta adecuada al cliente en caso de fallo.
 const uploadToCloudinary = (req, res, next) => {
   uploadMulter.single('image')(req, res, async (err) => {
     if (err) {

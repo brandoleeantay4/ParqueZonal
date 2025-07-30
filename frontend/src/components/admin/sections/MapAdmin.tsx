@@ -142,7 +142,7 @@ export const MapAdmin = () => {
       <div className="max-w-2xl">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <img
-            src={`${import.meta.env.VITE_API_URL}${mapData.image}` || "/placeholder.svg"}
+            src={mapData.image || "/placeholder.svg"}
             alt="Mapa del Parque"
             className={`w-full h-64 object-cover ${!mapData.active ? "opacity-50" : ""}`}
             onError={(e) => {
